@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+img {
+  width: 100vh;
+}
 body {
   font-family: roboto;
   font-weight: 300;
@@ -11,16 +13,25 @@ body {
   background-color: #e3dac6;
 }
 
+/* Contenedor general  */
+
+.contenedor-general {
+}
+
 /* Header */
+
 header nav {
   background-color: #141112;
   height: 120px;
   position: fixed;
   left: 0;
   right: 0;
-  padding: 0px 70px;
   z-index: 2;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
 .logo {
@@ -31,15 +42,11 @@ header nav {
 }
 
 header nav ol {
-  display: inline-block;
-  position: absolute;
-  right: 70px;
-  top: 45px;
-}
-
-header nav ol li {
-  display: inline-block;
-  padding-left: 65px;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 500px;
+  margin-bottom: 0;
 }
 
 header nav ol li a {
@@ -47,355 +54,29 @@ header nav ol li a {
   font-size: 22px;
   text-decoration: none;
   font-weight: 100;
+  padding-bottom: 0;
+  transition: all 0.3s ease;
 }
 
-/* Main - Carrousel -> Va a ser un carrousel en un futuro*/
-
-.carrousel {
-  position: relative;
+header nav ol li a:hover {
+  padding-bottom: 2px;
+  border-bottom: solid 2px #d7d3c5;
 }
 
-.carrousel__img {
-  width: 100%;
+/*Carrousel - modificaciones con css*/
+
+.carousel-item img {
   height: 650px;
   object-fit: cover;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.carrousel h1 {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 46%;
+.carousel-container-inner-h1 {
+  position: relative;
+}
+
+.carousel .carousel-title {
   color: #d7d3c5;
-  font-size: 70px;
-  font-weight: 300;
   text-shadow: 2px 2px 13px rgba(0, 0, 0, 1);
-}
-
-/* Main */
-
-main {
-}
-
-.slogan {
-  text-align: center;
-  font-size: 26px;
-  margin-top: 130px;
-  font-style: italic;
-  font-weight: 100;
-}
-
-h2 {
-  text-align: center;
-  font-weight: 400;
-}
-
-main section article {
-  margin: 120px 40px;
-}
-
-.article-title {
-  margin-bottom: 50px;
-  position: relative;
-}
-.article-title span {
-  display: inline-block;
-  width: 30%;
-  height: 1px;
-  background-color: #939393;
   position: absolute;
-  top: 50%;
-}
-
-.article-title--right {
-  right: 0px;
-}
-
-main section article img,
-main section article iframe {
-  width: 50%;
-  max-height: 500px;
-  display: inline-block;
-  object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.article__container-info {
-  position: relative;
-}
-
-.article__container-info p {
-  width: 45%;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-/*Articulo del chef*/
-
-.article__container-info--chef img {
-  width: 35%;
-  height: 600px;
-}
-
-.article__container-info--chef p {
-  width: 60%;
-}
-
-/*Articulo de la huerta*/
-
-.article-huerta__container-images {
-  text-align: center;
-}
-
-.article-huerta img {
-  width: 20%;
-  margin: 20px;
-}
-
-/* Mapa */
-
-.article-map {
-  margin: 120px 40px;
-  position: relative;
-}
-
-.article-map iframe {
-  border-radius: 3px;
-  width: 50%;
-}
-
-.article-map__info {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45%;
-}
-
-.article-map__info ul {
-  list-style: none;
-}
-
-.article-map__info ul li {
-  margin-bottom: 20px;
-}
-
-.article-map--info-bold {
-  font-weight: bold;
-}
-
-/* Footer */
-
-footer {
-  background-color: #141112;
-  color: #d7d3c5;
-  padding: 30px;
-}
-
-.footer-content {
-  margin-bottom: 60px;
-}
-
-.footer-content div {
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
-}
-
-.footer__content--div-center {
-  margin: 0 60px;
-}
-
-.footer-content div span {
-  font-weight: bold;
-}
-
-/* HTML - Menú */
-
-.container-menu {
-  margin: 60px 40px;
-}
-
-.menu-h2 {
-  text-align: center;
-  font-size: 34px;
-}
-
-.food {
-  margin: 70px 0;
-  border-bottom: solid 1px grey;
-}
-
-.food p {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.food__top {
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.food__top span {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 24px;
-}
-
-.food__top p {
-  font-size: 24px;
-}
-
-.menu-bambini {
-  text-align: center;
-  font-size: 24px;
-  margin: 20px 0;
-}
-
-.menu-bambini p {
-  margin: 16px 0;
-}
-
-/* HTML - FAQ - Preguntas frecuentes*/
-
-.faq {
-  margin: 60px 40px;
-  position: relative;
-}
-
-.faq__left {
-  width: 45%;
-}
-
-.faq__right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45%;
-}
-
-.faq__container {
-  margin-bottom: 60px;
-}
-
-.faq-line {
-  display: inline-block;
-  height: 100%;
-  width: 1px;
-  background-color: #939393;
-  position: absolute;
-  top: 0;
-  right: 50%;
-}
-
-.faq__question {
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
-/* HTML - Galería*/
-
-.container-galeria {
-  margin: 120px 40px;
-}
-
-.galeria {
-  text-align: center;
-}
-
-.galeria img {
-  width: 40%;
-  height: 500px;
-  object-fit: cover;
-  margin: 20px;
-}
-
-/* HTML - Contacto*/
-
-.container-contacto {
-  margin: 120px 40px;
-}
-
-.contacto__info {
-  text-align: center;
-  width: 100%;
-  margin: 60px 0;
-}
-
-.contacto__info img {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-}
-
-.contacto__info span {
-  display: block;
-  margin: 10px 0;
-}
-
-.contacto__redes-sociales {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.contacto__redes-sociales a img {
-  width: 80px;
-  height: 80px;
-  margin: 0 60px;
-}
-
-/* Form de contacto*/
-.container-form {
-  display: flex;
-  justify-content: center;
-}
-
-.contact-form {
-  width: 500px;
-}
-
-.contact-form div {
-  padding-top: 24px;
-  margin: 30px 0;
-  position: relative;
-}
-
-.wrap-label-input label,
-.wrap-label-textarea label {
-  position: absolute;
-  top: 0;
-}
-
-.wrap-label-input input {
-  height: 40px;
-  width: 100%;
-  border: none;
-  border-radius: 2px;
-}
-
-.wrap-label-textarea textarea {
-  width: 100%;
-  height: 130px;
-  border: none;
-  border-radius: 2px;
-}
-
-.contact-form .wrap-checkbox {
-  border: solid 1px grey;
-  border-radius: 2px;
-  width: 190px;
-  padding: 30px 25px;
-}
-
-.button-submit {
-  padding: 15px 28px;
-  background-color: inherit;
-  font-family: inherit;
-  border: solid 1px grey;
-  border-radius: 2px;
-  cursor: pointer;
+  top: 300px;
 }
