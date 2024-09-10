@@ -18,9 +18,32 @@ body {
 .contenedor-general {
 }
 
-/* Header */
+/* Header*/
+.navbar-logo {
+  width: 100px;
+  height: 100px;
+}
 
-header nav {
+/*Me vi obligada a usar un !important, ya que si no, no me lo tomaba (ni con un id) */
+.contenedor-general header .navbar-color {
+  background-color: #141112 !important;
+}
+
+.contenedor-general
+  header
+  .container-fluid
+  .collapse
+  .navbar-nav
+  .nav-item
+  .nav-link-color {
+  color: #e3dac6;
+}
+
+.contenedor-general header .container-fluid .navbar-toggler {
+  background-color: #e3dac6;
+}
+
+/* header nav {
   background-color: #141112;
   height: 120px;
   position: fixed;
@@ -34,11 +57,9 @@ header nav {
   padding: 0 50px;
 }
 
-.logo {
+.navbar-logo {
   width: 110px;
   height: 110px;
-  display: inline;
-  margin: 10px 0px;
 }
 
 header nav ol {
@@ -61,7 +82,7 @@ header nav ol li a {
 header nav ol li a:hover {
   padding-bottom: 2px;
   border-bottom: solid 2px #d7d3c5;
-}
+} */
 
 /*Carrousel - modificaciones con css*/
 
