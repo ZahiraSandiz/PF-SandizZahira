@@ -13,18 +13,18 @@ body {
   background-color: #e3dac6;
 }
 
-/* Contenedor general  */
+/* Contenedor general */
 
 .contenedor-general {
 }
 
-/* Header*/
+/* Header */
 .navbar-logo {
   width: 100px;
   height: 100px;
 }
 
-/*Me vi obligada a usar un !important, ya que si no, no me lo tomaba (ni con un id) */
+/* Me vi obligada a usar un !important, ya que si no, no me lo tomaba (ni con un id) */
 .contenedor-general header .navbar-color {
   background-color: #141112 !important;
 }
@@ -43,52 +43,10 @@ body {
   background-color: #e3dac6;
 }
 
-/* header nav {
-  background-color: #141112;
-  height: 120px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px;
-}
-
-.navbar-logo {
-  width: 110px;
-  height: 110px;
-}
-
-header nav ol {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  width: 500px;
-  margin-bottom: 0;
-}
-
-header nav ol li a {
-  color: #d7d3c5;
-  font-size: 22px;
-  text-decoration: none;
-  font-weight: 100;
-  padding-bottom: 0;
-  transition: all 0.3s ease;
-}
-
-header nav ol li a:hover {
-  padding-bottom: 2px;
-  border-bottom: solid 2px #d7d3c5;
-} */
-
-/*Carrousel - modificaciones con css*/
+/*Carrousel - las modificaciones que pude hacer con Boostrap para adaptalo al diseño que yo había planeado las hice en el HTML, las demas están a continuación: */
 
 .carousel-item img {
   height: 650px;
-  object-fit: cover;
 }
 
 .carousel-container-inner-h1 {
@@ -100,4 +58,365 @@ header nav ol li a:hover {
   text-shadow: 2px 2px 13px rgba(0, 0, 0, 1);
   position: absolute;
   top: 300px;
+}
+
+/* Estilos sin Boostrap */
+
+.slogan {
+  text-align: center;
+  font-size: 26px;
+  margin: 130px 0 70px 0;
+  font-style: italic;
+  font-weight: 100;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.article-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.article-title span {
+  width: 100%;
+  height: 1px;
+  background-color: #939393;
+}
+
+.article__container-info {
+  margin: 30px 30px 80px 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.article__container-info img {
+  object-fit: cover;
+  height: 500px;
+  border-radius: 4px;
+}
+
+.article__container-info--iframe iframe {
+  width: 50vw;
+  height: 50vh;
+  border-radius: 4px;
+}
+
+.article__container-info--iframe div {
+  width: 50%;
+}
+
+/*Articulo de la huerta*/
+
+.article-huerta__container-images {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.article-huerta img {
+  border-radius: 6px;
+  width: 200px;
+}
+
+/* Mapa */
+
+.article-map {
+  margin: 120px 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.article-map iframe {
+  border-radius: 3px;
+  width: 50%;
+}
+
+.article-map__info {
+  width: 45%;
+}
+
+.article-map__info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.article-map__info ul li {
+  margin-bottom: 20px;
+}
+
+.article-map--info-bold {
+  font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+  background-color: #141112;
+  color: #d7d3c5;
+  padding: 30px;
+}
+
+.footer-content {
+  margin-bottom: 60px;
+}
+
+.footer-content div {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+
+.footer__content--div-center {
+  margin: 0 60px;
+}
+
+.footer-content div span {
+  font-weight: bold;
+}
+
+/* HTML - Menú */
+
+.container-menu {
+  margin: 60px 40px;
+}
+
+.menu-h2 {
+  text-align: center;
+  font-size: 34px;
+}
+
+.food {
+  margin: 70px 0;
+  border-bottom: solid 1px grey;
+}
+
+.food p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.food__top {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.food__top span {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 24px;
+}
+
+.food__top p {
+  font-size: 24px;
+}
+
+.menu-bambini {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.menu-bambini p {
+  margin: 16px 0;
+}
+
+/* HTML - FAQ - Preguntas frecuentes*/
+
+.faq {
+  margin: 60px 40px;
+  position: relative;
+}
+
+.faq__left {
+  width: 45%;
+}
+
+.faq__right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+}
+
+.faq__container {
+  margin-bottom: 60px;
+}
+
+.faq-line {
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  background-color: #939393;
+  position: absolute;
+  top: 0;
+  right: 50%;
+}
+
+.faq__question {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* HTML - Galería*/
+
+.container-galeria {
+  margin: 120px 40px;
+}
+
+.galeria {
+  text-align: center;
+}
+
+.galeria img {
+  width: 40%;
+  height: 500px;
+  object-fit: cover;
+  margin: 20px;
+}
+
+/* HTML - Contacto*/
+
+.container-contacto {
+  margin: 120px 40px;
+}
+
+.contacto__info {
+  text-align: center;
+  width: 100%;
+  margin: 60px 0;
+}
+
+.contacto__info img {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.contacto__info span {
+  display: block;
+  margin: 10px 0;
+}
+
+.contacto__redes-sociales {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contacto__redes-sociales a img {
+  width: 80px;
+  height: 80px;
+  margin: 0 60px;
+}
+
+/* Form de contacto*/
+.container-form {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  width: 500px;
+}
+
+.contact-form div {
+  padding-top: 24px;
+  margin: 30px 0;
+  position: relative;
+}
+
+.wrap-label-input label,
+.wrap-label-textarea label {
+  position: absolute;
+  top: 0;
+}
+
+.wrap-label-input input {
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+}
+
+.wrap-label-textarea textarea {
+  width: 100%;
+  height: 130px;
+  border: none;
+  border-radius: 2px;
+}
+
+.contact-form .wrap-checkbox {
+  border: solid 1px grey;
+  border-radius: 2px;
+  width: 190px;
+  padding: 30px 25px;
+}
+
+.button-submit {
+  padding: 15px 28px;
+  background-color: inherit;
+  font-family: inherit;
+  border: solid 1px grey;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 640px) {
+  .slogan {
+    font-size: 20px;
+    margin: 30px 10px;
+  }
+
+  .article-title {
+    justify-content: center;
+  }
+
+  .article-title span {
+    display: none;
+  }
+
+  .article__container-info,
+  .article-map {
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 20px 30px 20px;
+  }
+
+  .article__container-info img {
+    height: 400px;
+    width: 300px;
+  }
+
+  .article__container-info--iframe iframe {
+    width: 90%;
+    height: 200px;
+  }
+
+  .article__container-info--iframe div {
+    width: 100%;
+  }
+
+  .article-huerta__container-images {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 160px;
+  }
+  .article-map iframe {
+    width: 90%;
+    height: 400px;
+  }
+  .article-map__info {
+    width: 100%;
+  }
 }
