@@ -13,18 +13,16 @@ body {
   background-color: #e3dac6;
 }
 
-/* Contenedor general */
-
-.contenedor-general {
-}
-
 /* Header */
 .navbar-logo {
   width: 100px;
   height: 100px;
 }
 
-/* Me vi obligada a usar un !important, ya que si no, no me lo tomaba (ni con un id) */
+/* Nav - Boostrap
+Las modificaciones que pude hacer con Boostrap para adaptalo al diseño las hice en el HTML, las demas están a continuación: 
+
+En este caso me vi obligada a usar un !important, ya que si no, no me lo tomaba (ni con un id) */
 .contenedor-general header .navbar-color {
   background-color: #141112 !important;
 }
@@ -43,20 +41,15 @@ body {
   background-color: #e3dac6;
 }
 
-/*Carrousel - las modificaciones que pude hacer con Boostrap para adaptalo al diseño que yo había planeado las hice en el HTML, las demas están a continuación: */
+/* Carrousel - Boostrap */
 
 .carousel-item img {
   height: 650px;
 }
 
-.carousel-container-inner-h1 {
-  position: relative;
-}
-
 .carousel .carousel-title {
   color: #d7d3c5;
   text-shadow: 2px 2px 13px rgba(0, 0, 0, 1);
-  position: absolute;
   top: 300px;
 }
 
@@ -166,16 +159,18 @@ footer {
 
 .footer-content {
   margin-bottom: 60px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .footer-content div {
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
+  flex: 1;
+  min-width: 200px;
 }
 
-.footer__content--div-center {
-  margin: 0 60px;
+.footer-content div:first-child {
+  flex: 2;
 }
 
 .footer-content div span {
@@ -204,15 +199,9 @@ footer {
 }
 
 .food__top {
-  position: relative;
   margin-bottom: 10px;
-}
-
-.food__top span {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 0;
+  display: flex;
+  justify-content: space-between;
   font-size: 24px;
 }
 
@@ -270,18 +259,27 @@ footer {
 /* HTML - Galería*/
 
 .container-galeria {
-  margin: 120px 40px;
+  margin: 100px 40px;
 }
 
 .galeria {
-  text-align: center;
+  margin-top: 30px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr); /* Tres columnas iguales */
+  grid-auto-rows: 200px; /* Altura de 200px para cada fila */
 }
 
 .galeria img {
-  width: 40%;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  margin: 20px;
+  border-radius: 4px;
+}
+
+.galeria .item-featured {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 /* HTML - Contacto*/
@@ -309,12 +307,12 @@ footer {
 
 .contacto__redes-sociales {
   text-align: center;
-  margin-bottom: 60px;
+  margin: 60px 0;
 }
 
 .contacto__redes-sociales a img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   margin: 0 60px;
 }
 
@@ -373,6 +371,8 @@ footer {
 /* Media Query */
 
 @media screen and (max-width: 640px) {
+  /* Index */
+
   .slogan {
     font-size: 20px;
     margin: 30px 10px;
@@ -418,5 +418,57 @@ footer {
   }
   .article-map__info {
     width: 100%;
+  }
+
+  /* Galeria */
+
+  .galeria {
+    grid-template-columns: auto;
+  }
+
+  .galeria .item-featured {
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  /* Faq - Preguntas Frecuentes*/
+
+  .faq {
+    position: unset;
+    margin: 50px 20px;
+  }
+
+  .faq .faq-line {
+    display: none;
+  }
+
+  .faq .faq__left,
+  .faq .faq__right {
+    width: 100%;
+    position: unset;
+  }
+
+  /* Menu */
+
+  .container-menu {
+    margin: 50px 20px;
+  }
+
+  .food__top {
+    flex-direction: column;
+  }
+
+  .menu-bambini {
+    font-size: 20px;
+  }
+
+  /* Contacto */
+
+  .contacto__redes-sociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 80px;
   }
 }
