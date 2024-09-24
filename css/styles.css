@@ -9,8 +9,17 @@ img {
 body {
   font-family: roboto;
   font-weight: 300;
+}
+
+/* Contenedor general */
+.contenedor-general {
   color: #141112;
-  background-color: #e3dac6;
+  background: rgb(245, 241, 224);
+  background: linear-gradient(
+    0deg,
+    rgba(245, 241, 224, 1) 0%,
+    rgba(227, 218, 198, 1) 100%
+  );
 }
 
 /* Header */
@@ -25,6 +34,7 @@ Las modificaciones que pude hacer con Boostrap para adaptalo al diseño las hice
 En este caso me vi obligada a usar un !important, ya que si no, no me lo tomaba (ni con un id) */
 .contenedor-general header .navbar-color {
   background-color: #141112 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .contenedor-general
@@ -42,6 +52,10 @@ En este caso me vi obligada a usar un !important, ya que si no, no me lo tomaba 
 }
 
 /* Carrousel - Boostrap */
+.carousel-custom {
+  filter: brightness(0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
 
 .carousel-item img {
   height: 650px;
@@ -49,7 +63,7 @@ En este caso me vi obligada a usar un !important, ya que si no, no me lo tomaba 
 
 .carousel .carousel-title {
   color: #d7d3c5;
-  text-shadow: 2px 2px 13px rgba(0, 0, 0, 1);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.3);
   top: 300px;
 }
 
@@ -92,12 +106,14 @@ h2 {
   object-fit: cover;
   height: 500px;
   border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .article__container-info--iframe iframe {
   width: 50vw;
   height: 50vh;
   border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .article__container-info--iframe div {
@@ -117,6 +133,7 @@ h2 {
 .article-huerta img {
   border-radius: 6px;
   width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Mapa */
@@ -130,6 +147,7 @@ h2 {
 .article-map iframe {
   border-radius: 3px;
   width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .article-map__info {
@@ -152,7 +170,12 @@ h2 {
 /* Footer */
 
 footer {
-  background-color: #141112;
+  background: rgb(20, 17, 18);
+  background: linear-gradient(
+    0deg,
+    rgba(20, 17, 18, 1) 61%,
+    rgba(0, 0, 0, 0.8029805672268908) 100%
+  );
   color: #d7d3c5;
   padding: 30px;
 }
@@ -309,11 +332,20 @@ footer {
   text-align: center;
   margin: 60px 0;
 }
+.contacto__redes-sociales a {
+  text-decoration: none;
+}
 
 .contacto__redes-sociales a img {
   width: 60px;
   height: 60px;
   margin: 0 60px;
+  transition: 0.5s;
+}
+
+.contacto__redes-sociales a img:hover {
+  width: 80px;
+  height: 80px;
 }
 
 /* Form de contacto*/
@@ -355,8 +387,8 @@ footer {
 .contact-form .wrap-checkbox {
   border: solid 1px grey;
   border-radius: 2px;
-  width: 190px;
-  padding: 30px 25px;
+  width: 180px;
+  padding: 20px;
 }
 
 .button-submit {
