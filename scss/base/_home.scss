@@ -1,0 +1,129 @@
+@import "../utilidades/mixin";
+
+main {
+  .slogan {
+    text-align: center;
+    font-size: 26px;
+    margin: 130px 0 70px 0;
+    font-style: italic;
+    font-weight: 100;
+
+    @media screen and (max-width: 640px) {
+      font-size: 20px;
+      margin: 30px 10px;
+    }
+  }
+
+  /* Seccion principal */
+
+  section {
+    /*Articulos acerca del restaurante*/
+    article {
+      .article__container-info {
+        margin: 30px 30px 80px 30px;
+        display: flex;
+        gap: 30px;
+        @media screen and (max-width: 640px) {
+          flex-direction: column;
+          align-items: center;
+          margin: 25px 20px 30px 20px;
+        }
+
+        img {
+          object-fit: cover;
+          height: 500px;
+          border-radius: $border-radius-principal;
+          box-shadow: $box-shadow-principal;
+          @media screen and (max-width: 640px) {
+            height: 400px;
+            width: 300px;
+          }
+        }
+      }
+
+      /* Estilos para el video */
+      .article__container-info--iframe {
+        iframe {
+          box-shadow: $box-shadow-principal;
+          width: 50vw;
+          height: 50vh;
+          border-radius: $border-radius-principal;
+
+          @media screen and (max-width: 640px) {
+            width: 90%;
+            height: 200px;
+          }
+        }
+        div {
+          width: 50%;
+          @media screen and (max-width: 640px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    /*Articulo acerca de la huerta del restaurante*/
+
+    .article-huerta {
+      .article-huerta__container-images {
+        margin: 30px;
+        @include flex(center, center, 20px);
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 640px) {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 160px;
+        }
+      }
+      img {
+        border-radius: $border-radius-principal;
+        width: 200px;
+        box-shadow: $box-shadow-principal;
+      }
+    }
+  }
+}
+
+/* Mapa del restaurante */
+
+.article-map {
+  margin: 120px 40px;
+  display: flex;
+  gap: 30px;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 20px 30px 20px;
+  }
+
+  iframe {
+    border-radius: 2px;
+    width: 50%;
+    box-shadow: $box-shadow-principal;
+
+    @media screen and (max-width: 640px) {
+      width: 90%;
+      height: 400px;
+    }
+  }
+
+  .article-map__info {
+    width: 45%;
+    @media screen and (max-width: 640px) {
+      width: 100%;
+    }
+
+    ul {
+      li {
+        margin-bottom: 20px;
+
+        .article-map--info-bold {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

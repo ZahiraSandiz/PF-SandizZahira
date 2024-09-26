@@ -1,0 +1,24 @@
+@import "../utilidades/variables";
+
+.carousel {
+  div {
+    .carousel-custom {
+      filter: brightness(0.8);
+      box-shadow: $box-shadow-secundario;
+      div {
+        div {
+          img {
+            height: 650px;
+          }
+        }
+      }
+    }
+  }
+  .carousel-title {
+    color: $color-title-carousel;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6),
+      0 0 25px rgba(255, 255, 255, 0.3);
+    top: 300px;
+    letter-spacing: 2px;
+  }
+}

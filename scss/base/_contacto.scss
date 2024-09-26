@@ -1,0 +1,106 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* Contacto */
+
+.container-contacto {
+  margin: 120px 40px;
+  div {
+    .contacto__info {
+      text-align: center;
+      width: 100%;
+      margin: 60px 0;
+      img {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+      }
+      span {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  }
+  div {
+    .contacto__redes-sociales {
+      text-align: center;
+      margin: 60px 0;
+      @media screen and (max-width: 640px) {
+        @include flex(center, center, 80px);
+        flex-direction: column;
+      }
+      a {
+        img {
+          width: 60px;
+          height: 60px;
+          margin: 0 60px;
+          transition: 0.5s;
+        }
+        img:hover {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+  div {
+    /* Form de contacto*/
+    .container-form {
+      display: flex;
+      justify-content: center;
+
+      .contact-form {
+        width: 500px;
+
+        .wrap-label-input,
+        .wrap-label-textarea {
+          position: relative;
+          margin: 30px 0;
+          padding-top: 24px;
+
+          label {
+            position: absolute;
+            top: 0;
+          }
+
+          input,
+          textarea {
+            width: 100%;
+            border: none;
+            border-radius: 2px;
+            padding: 10px;
+            font-family: inherit;
+            font-size: inherit;
+          }
+
+          textarea {
+            height: 130px;
+          }
+        }
+
+        .wrap-checkbox {
+          display: flex;
+          align-items: center;
+          border: solid 1px $color-lines;
+          border-radius: $border-radius-secundario;
+          padding: 20px;
+          width: 190px;
+          margin-bottom: 20px;
+
+          input {
+            margin-right: 10px;
+          }
+        }
+
+        .button-submit {
+          @include button(
+            15px 28px,
+            inherit,
+            $color-lines,
+            $border-radius-secundario
+          );
+        }
+      }
+    }
+  }
+}

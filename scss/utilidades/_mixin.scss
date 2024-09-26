@@ -1,0 +1,18 @@
+// Mixin para flex
+
+@mixin flex($align-items, $justify-content, $gap) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
+// Mixin para botones
+@mixin button($padding, $bg-color, $border-color, $border-radius) {
+  padding: $padding;
+  background-color: $bg-color;
+  font-family: inherit;
+  border: solid 1px $border-color;
+  border-radius: $border-radius;
+  cursor: pointer;
+}

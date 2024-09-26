@@ -1,0 +1,71 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// General
+.contenedor-general {
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  font-family: roboto;
+  color: #141112;
+  font-weight: 300;
+  background: $color-principal;
+  background: linear-gradient(
+    0deg,
+    rgba(245, 241, 224, 1) 0%,
+    rgba(227, 218, 198, 1) 100%
+  );
+}
+
+/* Todos los h2 */
+.article-title {
+  @include flex(center, space-between, 5%);
+  span {
+    width: 100%;
+    height: 1px;
+    background-color: $color-lines;
+
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+    @media screen and (max-width: 640px) {
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    justify-content: center;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  width: 100vh;
+}

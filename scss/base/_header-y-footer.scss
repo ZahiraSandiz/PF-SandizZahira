@@ -1,0 +1,58 @@
+//variables
+@import "../utilidades/variables";
+
+/* Header */
+/* Nav - Boostrap
+Me vi obligada a usar un !important, ya que si no, no me lo tomaba (ni con un id) */
+header {
+  .navbar-color {
+    background-color: $color-secundario !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.12);
+    div {
+      a {
+        .navbar-logo {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      div {
+        button {
+          background-color: $color-principal;
+        }
+      }
+      div {
+        ul {
+          li {
+            .nav-link-color {
+              color: $color-principal;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: $color-secundario;
+  color: $color-principal;
+  padding: 30px;
+  .footer-content {
+    margin-bottom: 60px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    div {
+      flex: 1;
+      min-width: 200px;
+      span {
+        font-weight: bold;
+      }
+    }
+    div:first-child {
+      flex: 2;
+    }
+  }
+}

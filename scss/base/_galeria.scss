@@ -1,0 +1,34 @@
+@import "../utilidades/variables";
+
+/* Galería */
+.container-galeria {
+  margin: 100px 40px;
+
+  .galeria {
+    margin-top: 30px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    @media screen and (max-width: 640px) {
+      grid-template-columns: auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: $box-shadow-principal;
+    }
+
+    .item-featured {
+      grid-column: span 2;
+      grid-row: span 2;
+      @media screen and (max-width: 640px) {
+        grid-column: unset;
+        grid-row: unset;
+      }
+    }
+  }
+}
