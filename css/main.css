@@ -83,6 +83,9 @@ header .navbar-color div a .navbar-logo {
 header .navbar-color div div button {
   background-color: rgb(227, 218, 198);
 }
+header .navbar-color div div ul li .font-bold {
+  font-weight: 500;
+}
 header .navbar-color div div ul li .nav-link-color {
   color: rgb(227, 218, 198);
 }
@@ -266,10 +269,23 @@ main section .article-huerta img {
 .container-menu .menu-h2 {
   text-align: center;
   font-size: 34px;
+  font-weight: 400;
+}
+@media screen and (max-width: 640px) {
+  .container-menu .menu-h2 {
+    font-size: 26px;
+  }
 }
 .container-menu .food {
   margin: 70px 0;
   border-bottom: solid 1px grey;
+  /* Nombre del plato y precio */
+  /* Descripción del plato */
+}
+@media screen and (max-width: 640px) {
+  .container-menu .food {
+    margin: 40px 0;
+  }
 }
 .container-menu .food .food__top {
   margin-bottom: 10px;
@@ -278,14 +294,21 @@ main section .article-huerta img {
   justify-content: space-between;
   gap: 0;
   font-size: 24px;
+  /* Nombre del plato */
 }
 @media screen and (max-width: 640px) {
   .container-menu .food .food__top {
     flex-direction: column;
+    font-size: 20px;
   }
 }
 .container-menu .food .food__top p {
   font-size: 24px;
+}
+@media screen and (max-width: 640px) {
+  .container-menu .food .food__top p {
+    font-size: 20px;
+  }
 }
 .container-menu .food p {
   font-size: 20px;
@@ -294,16 +317,17 @@ main section .article-huerta img {
 @media screen and (max-width: 640px) {
   .container-menu .food p {
     text-align: center;
+    font-size: 16px;
   }
 }
 .container-menu .menu-bambini {
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   margin: 20px 0;
 }
 @media screen and (max-width: 640px) {
   .container-menu .menu-bambini {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 .container-menu .menu-bambini p {

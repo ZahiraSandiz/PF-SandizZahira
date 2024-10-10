@@ -13,12 +13,21 @@
   .menu-h2 {
     text-align: center;
     font-size: 34px;
+    font-weight: 400;
+    @media screen and (max-width: 640px) {
+      font-size: 26px;
+    }
   }
 
   /* Cada plato */
   .food {
     margin: 70px 0;
     border-bottom: solid 1px grey;
+    @media screen and (max-width: 640px) {
+      margin: 40px 0;
+    }
+
+    /* Nombre del plato y precio */
     .food__top {
       margin-bottom: 10px;
       @include flex(center, space-between, 0);
@@ -26,28 +35,35 @@
 
       @media screen and (max-width: 640px) {
         flex-direction: column;
+        font-size: 20px;
       }
 
+      /* Nombre del plato */
       p {
         font-size: 24px;
+        @media screen and (max-width: 640px) {
+          font-size: 20px;
+        }
       }
     }
+    /* Descripción del plato */
     p {
       font-size: 20px;
       margin-bottom: 10px;
 
       @media screen and (max-width: 640px) {
         text-align: center;
+        font-size: 16px;
       }
     }
   }
   /* Menú infantil */
   .menu-bambini {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     margin: 20px 0;
     @media screen and (max-width: 640px) {
-      font-size: 20px;
+      font-size: 16px;
     }
     p {
       margin: 16px 0;
